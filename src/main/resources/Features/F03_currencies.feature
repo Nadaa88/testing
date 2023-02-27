@@ -1,4 +1,4 @@
-@smoke
+
 Feature: Verify Currency symbol on Home page
 
   Scenario: Verify Euro currency symbol on Home page

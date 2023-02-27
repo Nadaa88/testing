@@ -1,19 +1,5 @@
 @smoke
-
-Feature: Login functionality for a social networking site.
-
-  Scenario Outline: Login with different username and password
-    Given user navigates to Facebook
-    When user enter Username as "<username>" and Password as "<password>"
-    And user clicks on the login button
-    Then login should be unsuccessful
-
-    Examples:
-      | username | password |
-      | Test1    | Pass1    |
-      | Test2    | Pass2    |
-      | Test3    | Pass3    |
-
+Feature: Search functionality in e-commerce website
 
   Scenario Outline 1: Search using product name
     Given user is on the home page of the website
@@ -29,16 +15,18 @@ Feature: Login functionality for a social networking site.
       | nike |
 
   Scenario Outline 2: Search using sku
-    Given user verify to home page of the website
+    Given user is on the home page of the website
     When user searches for product with sku "<sku>"
     Then search shows relevant results
+    And URL contains "https://demo.nopcommerce.com/search?q="
+    And click on the product in search result
+    And verify the sku of the product is "<sku>"
 
     Examples:
       | sku |
       | SCI_FAITH |
       | APPLE_CAM |
       | SF_PRO_11 |
-
 
 
 
