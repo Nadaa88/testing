@@ -7,7 +7,7 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import org.testng.AssertJUnit;
+
 
 public class D03_currenciesStepDef {
     P03_homePage homePage = new P03_homePage();

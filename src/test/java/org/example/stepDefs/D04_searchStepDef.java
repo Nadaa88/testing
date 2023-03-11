@@ -7,10 +7,9 @@ import org.example.pages.P03_homePage;
 import org.junit.Assert;
 
 public class D04_searchStepDef {
-    private P03_homePage homePage;
+    P03_homePage homePage = new P03_homePage();
     private String searchedProduct;
     private String searchedSku;
-    private P03_homePage searchResultsPage;
 
     @Given("user is on the home page of the website")
     public void user_is_on_the_home_page_of_the_website() {
@@ -39,7 +38,8 @@ public class D04_searchStepDef {
 
     @Then("URL contains {string}")
     public void url_contains(String url) {
-        Assert.assertTrue(searchResultsPage.getCurrentURL().contains(url));
+
+        Assert.assertTrue(P03_homePage.getCurrentURL().contains(url));
     }
 
     @Then("verify the search results contain the searched product")
